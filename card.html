@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dodaj studenta</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <style>
+        form {
+            width: 600px;
+        }
+        
+        form input,
+        form select {
+            font-size: 12px;
+            border: 1px solid #909090;
+            color: #676767;
+            padding: 10px 20px;
+            width: 100%;
+            width: 600px;
+            resize: none;
+            transition: border-color 0.3s linear;
+            box-sizing: border-box;
+            margin: 0 0 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Wprowadź swoje dane</h2>
+    <form name="insert" action="S194341insert.php" method="POST">
+        <input type="number" placeholder="id studenta:" name="id_studenta" min="1" max="999999" required />
+        <input type="text" placeholder="nazwisko:" name="nazwisko" required />
+        <input type="text" placeholder="imie:" name="imie" required />
+        <input type="date" placeholder="data urodzenia" name="data_urodzenia" min="1890-01-01" max="2010-12-31" pattern="^((?:19|20)\d\d)[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$" required />
+        <select name="nr_grupy">
+            <option disabled>Wybierz nr grupy</option>
+            <option value="KrDzIS2011SO" />KrDzIS2011SO
+            <option value="KrDzIS2011SI" />KrDzIS2011SI
+            <option value="KrDzIS2012SO" />KrDzIS2012SO
+            <option value="KrDzIS2012SI" />KrDzIS2012SI
+            <option value="KrDzIS2013SO" />KrDzIS2013SO
+        </select>
+        <input type="submit" />
+    </form>
+</body>
+
+</html>
